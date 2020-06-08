@@ -1,7 +1,7 @@
 def base_hash
   # Remember implicit return! We're returning this new Hash _without_ the
   # keyword "return." Nice and neat.
-
+  return :railroads => {}
 end
 
 def monopoly_with_second_tier
@@ -9,7 +9,11 @@ def monopoly_with_second_tier
   # you built in the previous method. Run the tests. They will fail, but
   # they'll guide you in how to modify what you just did to have more
   # complexity.
-
+  test = base_hash
+  test[:railroads][:pieces] = 4
+  test[:railroads][:rent_in_dollars] = {}
+  test[:railroads][:names] = {}
+  return test
 end
 
 def monopoly_with_third_tier
@@ -17,7 +21,19 @@ def monopoly_with_third_tier
   # you built in the previous method. Run the tests. They will fail, but
   # they'll guide you in how to modify what you just did to have more
   # complexity.
-
+  test = base_hash
+  test[:railroads][:pieces] = 4
+  test[:railroads][:rent_in_dollars] = {}
+  test[:railroads][:names] = {}
+  test[:railroads][:rent_in_dollars][:one_piece_owned] = 25
+  test[:railroads][:rent_in_dollars][:two_pieces_owned] = 50
+  test[:railroads][:rent_in_dollars][:three_pieces_owned] = 100
+  test[:railroads][:rent_in_dollars][:four_pieces_owned] = 200
+  test[:railroads][:names][:reading_railroad] = {}
+  test[:railroads][:names][:pennsylvania_railroad] = {}
+  test[:railroads][:names][:b_and_o_railroad] = {}
+  test[:railroads][:names][:shortline_railroad] = {}
+  return test
 end
 
 def monopoly_with_fourth_tier
@@ -25,5 +41,21 @@ def monopoly_with_fourth_tier
   # you built in the previous method. Run the tests. They will fail, but
   # they'll guide you in how to modify what you just did to have more
   # complexity.
-
+  test = base_hash
+  test[:railroads][:pieces] = 4
+  test[:railroads][:rent_in_dollars] = {}
+  test[:railroads][:names] = {}
+  test[:railroads][:rent_in_dollars][:one_piece_owned] = 25
+  test[:railroads][:rent_in_dollars][:two_pieces_owned] = 50
+  test[:railroads][:rent_in_dollars][:three_pieces_owned] = 100
+  test[:railroads][:rent_in_dollars][:four_pieces_owned] = 200
+  test[:railroads][:names][:reading_railroad] = {}
+  test[:railroads][:names][:pennsylvania_railroad] = {}
+  test[:railroads][:names][:b_and_o_railroad] = {}
+  test[:railroads][:names][:shortline_railroad] = {}
+  test[:railroads][:names][:reading_railroad][:mortgage_value] = 100
+  test[:railroads][:names][:pennsylvania_railroad][:mortgage_value] = 200
+  test[:railroads][:names][:b_and_o_railroad][:mortgage_value] = 400
+  test[:railroads][:names][:shortline_railroad][:mortgage_value] = 800
+  return test
 end
